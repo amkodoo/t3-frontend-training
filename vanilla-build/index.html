@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/3bfd3ce9e5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Vanilla Build T3</title>
+  </head>
+  <body>
+    <main>
+      <div class="grid">
+        <!-- Turn indicator -->
+        <div class="turn">
+          <i class="fa-solid fa-x turqoise"></i>
+          <p>Player 1, you're up!</p>
+        </div>
+        <!-- Dropdown menu -->
+        <div class="menu">
+          <button class="menu-btn" data-id="menu-button">
+            Actions
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div class="items border hidden" data-id="menu-popup">
+            <button data-id="reset-btn">Reset</button>
+            <button data-id="new-round-btn">New Round</button>
+          </div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+
+        <!-- Score Board -->
+        <div class="score shadow" style="background-color: var(--turqoise)">
+          <p>Player 1</p>
+          <span data-id="player1-stats">0 Wins</span>
+        </div>
+        <div class="score shadow" style="background-color: var(--light-gray)">
+          <p>Ties</p>
+          <span data-id="ties">0</span>
+        </div>
+        <div class="score shadow" style="background-color: var(--yellow)">
+          <p>Player 2</p>
+          <span data-id="player2-stats">0 Wins</span>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Project done by
+        <a href="https://github.com/amkodoo"> @amkodoo </a>
+      </p>
+    </footer>
+    <div class="modal hidden">
+      <div class="modal-contents">
+        <p>Player 1 wins!</p>
+        <button>Play again</button>
+      </div>
+    </div>
+  </body>
+</html>
