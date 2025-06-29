@@ -3,7 +3,7 @@
 :root {
   --dark-grey: #1a2a32;
   --gray: #2e4756;
-  --turqoise: #3cc4bf;
+  --turquoise: #3cc4bf;
   --yellow: #f2b147;
   --light-gray: #d3d3d3;
 }
@@ -56,8 +56,8 @@ body {
   color: var(--yellow);
 }
 
-.turqoise {
-  color: var(--turqoise);
+.turquoise {
+  color: var(--turquoise);
 }
 
 .shadow {
@@ -69,13 +69,12 @@ body {
   border: 1px solid rgba(211, 211, 211, 0.4) !important;
 }
 
-.button:hover {
+button:hover {
   cursor: pointer;
   opacity: 80%;
 }
 
 .turn {
-  color: var(--yellow);
   align-self: center;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -232,7 +231,7 @@ footer a {
 
 .modal-contents button {
   padding: 10px;
-  background-color: var(--turqoise);
+  background-color: var(--turquoise);
   color: #2a4544;
   border-radius: 3px;
 }
