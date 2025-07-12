@@ -50,7 +50,7 @@ export default class View {
   updateScorebaord(p1Wins, p2Wins, ties) {
     this.$.p1Wins.innerText = `${p1Wins} wins`;
     this.$.p2Wins.innerText = `${p2Wins} wins`;
-    this.$.ties.innerText = `${ties} wins`;
+    this.$.ties.innerText = `${ties}`;
   }
   openModal(message) {
     this.$.modal.classList.remove("hidden");

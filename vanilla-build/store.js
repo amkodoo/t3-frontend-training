@@ -28,7 +28,7 @@ export default class Store {
         };
       }),
       ties: state.history.currentRoundGames.filter(
-        (game) => game.status.winner === null
+        (game) => game.status.winner == null
       ).length,
     };
   }
@@ -132,5 +132,10 @@ export default class Store {
     }
 
     this.#state = newState;
+  }
+
+  exportState() {
+    const logstate = this.#getState();
+    return logstate;
   }
 }
