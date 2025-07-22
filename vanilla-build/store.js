@@ -6,10 +6,12 @@ const initalValue = {
   },
 };
 
-export default class Store {
+export default class Store extends EventTarget {
   #state = initalValue;
 
-  constructor(players) {
+  constructor(key, players) {
+    super();
+    this.storageKey = key;
     this.players = players;
   }
 
@@ -112,7 +114,8 @@ export default class Store {
   }
 
   #getState() {
-    return this.#state;
+    const item = window.localStorage.getItem(this.storageKey);
+    return item ? JSON.parse(item) : initalValue;
   }
 
   #saveState(stateOrFn) {
@@ -131,11 +134,7 @@ export default class Store {
         throw new Error("Invalid argument passed to saveState");
     }
 
-    this.#state = newState;
-  }
-
-  exportState() {
-    const logstate = this.#getState();
-    return logstate;
+    window.localStorage.setItem(this.storageKey, JSON.stringify(newState));
+    this.dispatchEvent(new Event("statechange"));
   }
 }
