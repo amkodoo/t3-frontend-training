@@ -1,0 +1,9 @@
+{
+  "name": "ts-refactor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
